@@ -1,0 +1,2 @@
+//核线校正命令
+./rectify_image.out ./images/001.JPG ./images/002.JPG
