@@ -1,0 +1,62 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}.out",
+				"-I","/usr/local/include",
+				"-I","/usr/local/include/opencv2",
+				"-I", "/usr/local/include/pcl-1.12",
+				"-I","/usr/include/eigen3",
+				"-I", "/usr/local/include/vtk-9.1",
+				"-I", "/usr/include/qhull",
+                "-I", "/usr/include/flann",
+                "-I", "/usr/include/boost",
+				"-L","/usr/local/lib",
+				"-l","opencv_calib3d",
+				"-l","opencv_core",
+				"-l","opencv_imgproc",
+				"-l","opencv_imgcodecs",
+				"-l","opencv_video",
+				"-l","opencv_ml",
+				"-l","opencv_highgui",
+				"-l","opencv_objdetect",
+				"-l","opencv_features2d",
+				"-l","opencv_flann",
+				"-l","opencv_imgcodecs",
+				"-l","opencv_photo",
+				"-l","opencv_videoio",
+				"-l", "pcl_io",                           
+                "-l", "pcl_visualization",
+                "-l", "pcl_common",
+				"-l", "pcl_kdtree",
+				"-l", "pcl_features",
+				"-l", "pcl_surface",
+				"-l", "vtkFiltersSources-9.1",
+                "-l", "vtkCommonCore-9.1",
+				"-l", "vtkCommonColor-9.1",
+                "-l", "vtkRenderingCore-9.1",
+				"-L", "/usr/include/x86_64-linux-gnu", 
+                "-l", "boost_system", 
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/g++"
+		}
+	]
+}
